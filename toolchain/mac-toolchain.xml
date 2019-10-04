@@ -28,7 +28,7 @@
   <flag value="-isysroot" unless="LEGACY_MACOSX_SDK"/>
   <flag value="${DEVELOPER_DIR}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX${MACOSX_VER}.sdk" unless="LEGACY_MACOSX_SDK"/>
   <flag value="-g" if="debug"/>
-  <flag value="-O2" unless="debug"/>
+  <flag value="-O0" unless="debug"/>
   <flag value="-I${HXCPP}/include"/>
   <flag value="-DHX_MACOS"/>
   <flag value="-m32" unless="HXCPP_M64"/>

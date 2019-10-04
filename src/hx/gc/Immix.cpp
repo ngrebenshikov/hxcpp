@@ -151,15 +151,15 @@ static bool sGcVerifyGenerational = false;
 #endif
 
 
-#if HX_HAS_ATOMIC && (HXCPP_GC_DEBUG_LEVEL==0) && !defined(HX_GC_VERIFY)
-  #if defined(HX_MACOS) || defined(HX_WINDOWS) || defined(HX_LINUX)
-  enum { MAX_MARK_THREADS = 4 };
-  #else
-  enum { MAX_MARK_THREADS = 2 };
-  #endif
-#else
+// #if HX_HAS_ATOMIC && (HXCPP_GC_DEBUG_LEVEL==0) && !defined(HX_GC_VERIFY)
+//   #if defined(HX_MACOS) || defined(HX_WINDOWS) || defined(HX_LINUX)
+//   enum { MAX_MARK_THREADS = 4 };
+//   #else
+//   enum { MAX_MARK_THREADS = 2 };
+//   #endif
+// #else
   enum { MAX_MARK_THREADS = 1 };
-#endif
+// #endif
 
 #ifdef PROFILE_THREAD_USAGE
 static int sThreadMarkCountData[MAX_MARK_THREADS+1];
